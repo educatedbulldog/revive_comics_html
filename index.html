@@ -14,6 +14,24 @@
     overflow: hidden;
   }
 
+  /* Your mobile fixes */
+  @media (max-width: 768px) {
+    body {
+      background-attachment: scroll;
+      overflow: auto;
+    }
+
+    /* Reset layouts to stack naturally */
+    div, p, img {
+      position: static !important;
+      margin: 10px auto !important;
+      width: 90% !important;
+      text-align: center !important;
+    }
+
+    .topnav { display: flex; flex-direction: column; }
+    .logo img { width: 50% !important; }
+  }
 </style>
 
 </head>
