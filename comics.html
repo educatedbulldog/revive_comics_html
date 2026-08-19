@@ -2,27 +2,93 @@
 <html>
 <head>
     <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div class="sidebar">
+<style>
+  body{
+    background-image: url('Frame.png'), linear-gradient(rgba(68, 56, 56, 0.5), rgba(0, 0, 0, 0.5)),url(LogoSm.png);
+    background-repeat: no-repeat, no-repeat,no-repeat;
+    background-size: 100% 107.3%,100% 122%,100% 150% ;
+    background-position: 0% 86.5%,0%,center;
+    background-attachment: fixed,fixed,fixed;
+    overflow: hidden;
+  }
 
-</div>
-<div class="topnav">
-  <img src="Screenshot 2026-03-30 095616.png">
-  <a  href="#home">Home</a> 
-  <a class="active" href="#comics">Comics</a>
-  <a href="#socials">Socials</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-</div>
+  @media (max-width: 768px) {
+    body{  background-image: url('Frame.png'), linear-gradient(rgba(128, 103, 103, 0.5), rgba(0, 0, 0, 0.5)),url(LogoSm.png); 
+    overflow: auto; background-position-x: 0px !important; background-position-y: 250px ,!important;  background-size: 0% 0%,200% 200%,100% 50% !important;
+}
+    div, p,img {
+      margin: 10px auto !important;
+      width: 90% !important;
+      text-align: center !important;
+    }
+    .topnav { display: flex; justify-content: space-between; align-items: center; padding-left: 10%; position: relative;margin-top: -6%!important;max-height:  120px;position: fixed !important;z-index: 30; }
+    .logo img { width: 110% !important; height:auto; } 
+    .menu-icon { display: block; cursor: pointer; font-size: 7vw; color: white; }
+
+    div.links { 
+    display: none; 
+    flex-direction: column; 
+    width: 50% !important; 
+    height: 90vh !important; 
+    background: rgba(0,0,0,1) !important; 
+    position: fixed !important; 
+    top: 90px !important;  
+    left: 50% !important; 
+    z-index: 9999 !important;
+  }
+    .welcome p{font-size: 9vw !important; position:relative; top:130px;}
+    .welcome img{width: 0 !important;}
+    
+    .links.responsive { display: flex; }
+    .links a { color: white; text-decoration: none; padding: 30px; border-bottom: 1px solid #333; font-size: xx-large; text-align: center;}
+    .body {    background-size: 100% 107.3%,100% 122%,100% 150% !important; background-position: 0% 86.5%,0%,center!important;}
+    .reviveLogo{position: relative!important; bottom: -480px!important; right: 0px!important; width: 30%!important; margin-right: 0%!important;}  
+}
+
+  @media (min-width: 769px) {
+    .menu-icon { display: none; }
+  }
+</style>
+
 </head>
 <body>
-<table align="center">
-  <tr>
-    <td>
-    <img src="image.png" width="150" height="205">
-    </td>
-  </tr>
-</table>
 
+<div class="topnav" id="myTopnav">
+  <div class="logo">
+    <img src="LogoSm.png"> 
+  </div>
+  
+  <div class="menu-icon" onclick="toggleMenu();">☰</div>
+
+  <div class="links" id="navLinks">
+    <a href="index.html">Home</a> 
+    <a class="active" href="comics.html">Comics</a>
+    <a href="socials.html">Socials</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+  </div>
+</div>
+
+<div class="welcome">
+  <p style="color:black; margin-left: 5%; margin-top:20%;font-size: 5vw; text-align: center; display: flex; align-items: center; justify-content: center; width: 100%; position: relative; gap: 20px; flex-wrap: wrap;"> 
+    This page is under construction.
+    <img src="HARDHAT.png" style="height: auto; max-height: 15vw; width: auto;margin-left: -7%;margin-top: -2%;">
+  </p>
+</div>
+
+
+
+<div class="reviveLogo" style="position: fixed; bottom: -10px; right: -150px; z-index: 10;">
+      <img src="ReviveLogo.png" style="width: 50%; display: block;">
+</div>
 </body>
+
+<script>
+  function toggleMenu() {
+    var x = document.getElementById("navLinks");
+    x.classList.toggle("responsive");
+  }
+</script>
 </html>
