@@ -6,7 +6,7 @@
 
 <style>
   body {
-    background-image: url('Frame.png'), linear-gradient(rgba(68, 56, 56, 0.5), rgba(0, 0, 0, 0.0)), url('VSnoTextCover.png');
+    background-image: url('null.png'), linear-gradient(rgba(68, 56, 56, 0.5), rgba(0, 0, 0, 0.0)), url('VSnoTextCover.PNG');
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-size: 100% 107.3%, 100% 122%, 100% 150%;
     background-position: 0% 86.5%, 0%, center;
@@ -62,9 +62,11 @@
     }
     
     body { 
-      background-image: url('Frame.png'), linear-gradient(rgba(101, 1, 1, 0.5), rgba(0, 0, 0, 0.5)), url('editBotaSpread.png'); 
-      background-size: 0% 0%, cover, cover; 
+      background-image: url('Frame.png'), linear-gradient(rgba(101, 1, 1, 0.5), rgba(0, 0, 0, 0.1)), url('test.png'); 
+      background-size: 0% 0%, 100% 100%, 200% 100%; 
+      background-position: 0,0,50% -550px;
       background-attachment: scroll, scroll, scroll;
+      background-color: black;
     }
     
     .topnav { padding: 0 20px !important; }
@@ -107,6 +109,20 @@
 
     .reviveLogo { position: relative !important; text-align: center; margin: 20px auto !important; margin-top: 500px !important; }
     .reviveLogo img { width: 40% !important; margin: 0 auto !important; } 
+
+    .table tbody, 
+    .table tr, 
+    .table td { display: block !important; width: 100% !important;box-sizing: border-box !important;align-items: center !important;}     
+    .shelf {width: 90% !important;margin: 20px auto !important;  padding: 10px !important}
+    .table td iframe,
+    [id^="product-component-"],
+    .shopify-buy-frame,
+    .shopify-buy__layout-vertical,
+    .shopify-buy__product {
+      margin: 0 auto !important;
+      display: block !important;
+      text-align: center !important;
+    }
   }
 </style>
 </head>
@@ -131,13 +147,13 @@
 
 
 
-<div style=" padding: 20px; font-family: sans-serif; width:60%; margin: 0 auto; margin-right: 36%; ">
+<div class="shelf" style=" padding: 20px; font-family: sans-serif; width:60%; margin: 0 auto; margin-right: 36%; ">
     
-    <table style="width: 100%; border-collapse: collapse; background-color: rgba(0,0,0,0.4); outline: 2px solid #ff4a4a;">
+    <table class="table" style="width: 100%; border-collapse: collapse; background-color: rgba(0,0,0,0.4); outline: 2px solid #ff4a4a; ">
         <tbody>
             <tr>
                 <!-- Shelf Slot 1 -->
-                <td style="width: 20%; padding: 15px; border: 1px solid #333340; vertical-align: top;">
+                <td style="width: 20%; padding: 15px; border: 1px solid hsl(240, 11%, 23%); vertical-align: top; ">
                     <div id='product-component-1790047905283' style="width: 100%;"></div>
                 </td>
                 
@@ -148,9 +164,9 @@
                 </td>
                 
                 <!-- Shelf Slot 3 -->
-                <td style="width: 4%; padding: 15px; border: 1px solid #333340; vertical-align: top;text-align: center;">
+                <td style="width: 20%; padding: 15px; border: 1px solid #333340; vertical-align: top;text-align: center;">
                     <!-- Third product div goes here -->
-                  <div><img src="placeHoldComic.png" style="max-width: 266px;height: auto;"> 
+                  <div><img src="placeHoldComic.png" style="max-width: 100%;height: auto;"> 
                   </div>
                   <p style="text-align: center; margin-left: -4%; margin-top: 35px;font-size:25px;">Coming Soon.</p>
 
